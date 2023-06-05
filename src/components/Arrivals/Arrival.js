@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { RiHeartsLine } from "react-icons/ri";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation, Scrollbar, A11y } from "swiper";
 import "swiper/css";
@@ -10,18 +10,16 @@ import "swiper/css/scrollbar";
 const Arrival = () => {
   return (
     <div className="relative top-3 p-1">
-      <span className="text-xl px-2 p-2 font-bold">New Arrivals</span>
+      <span className="text-lg px-4 pt-7 font-bold">New Arrivals</span>
       <Swiper
-        className="w-[120%] h-42 "
-        // install Swiper modules
-        loopFillGroupWithBlank={true}
+        className="w-[100%] h-42 "
         modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={12}
+        spaceBetween={0}
         slidesPerView={2}
         slidesPerGroup={4}
         loop={true}
       >
-        <SwiperSlide className="flex rounded-[10px] p-2 overflow-hidden relative">
+        <SwiperSlide className="flex rounded-[10px] p-1 overflow-hidden relative">
           <div className="w-88 p-3 bg-base-100">
             <Link to="/product">
               <figure className=" pt-1">
@@ -33,6 +31,12 @@ const Arrival = () => {
                   height={173}
                 />
               </figure>
+              <span className="absolute ml-2 text-white top-8 right-7 p-1 rounded-full bg-black">
+                <i className="fas fa-shopping-cart">
+                  <RiHeartsLine />
+                </i>{" "}
+                {/* Cart icon */}
+              </span>
             </Link>
             <div className="card-body items-center text-center">
               <h2 className="card-title text-lg font-bold font-Popp">
@@ -55,6 +59,12 @@ const Arrival = () => {
                   height={173}
                 />
               </figure>
+              <span className="absolute ml-2 text-white top-8 right-7 p-1 rounded-full bg-black">
+                <i className="fas fa-shopping-cart">
+                  <RiHeartsLine />
+                </i>{" "}
+                {/* Cart icon */}
+              </span>
             </Link>
 
             <div className="card-body items-center text-center">
@@ -78,6 +88,12 @@ const Arrival = () => {
                   height={173}
                 />
               </figure>
+              <span className="absolute ml-2 text-white top-8 right-7 p-1 rounded-full bg-black">
+                <i className="fas fa-shopping-cart">
+                  <RiHeartsLine />
+                </i>{" "}
+                {/* Cart icon */}
+              </span>
             </Link>
 
             <div className="card-body items-center text-center">

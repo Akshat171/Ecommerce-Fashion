@@ -1,8 +1,14 @@
 import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { BsFillHandbagFill } from "react-icons/bs";
-import FIRST from "./first.jpg";
+import {
+  BsFillHandbagFill,
+  BsHandbag,
+  BsFillSkipBackwardCircleFill,
+} from "react-icons/bs";
+import { AiOutlineHeart } from "react-icons/ai";
+// import FIRST from "./first.jpg";
+import FIRST from "./1st.png";
 import { increaseQuantity, decreaseQuantity } from "../redux/action";
 const mapStateToProps = (state) => ({
   quantity: state.quantity,
@@ -39,13 +45,34 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
     <section className="text-gray-600 body-font overflow-hidden flex flex-wrap">
       <div className="container mx-auto">
         {" "}
-        <img
-          alt="ecommerce"
-          className="lg:w-1/2 w-full lg:h-auto -top-2 h-96 object-cover object-center rounded -z-20"
-          src={FIRST}
-        />
-        <div className="lg:w-4/5 mx-auto px-5">
-          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+        <div>
+          <img
+            alt="ecommerce"
+            className="lg:w-1/2 w-full lg:h-auto -top-2 h-96 object-cover object-center rounded -z-20 bg-gradient-to-t from-neutral-100 to-slate-300"
+            src={FIRST}
+          />
+
+          <span className="absolute text-white p-2 rounded-full bg-black top-4 left-4">
+            <i className="far fa-heart ">
+              <BsFillSkipBackwardCircleFill />
+            </i>{" "}
+            {/* Like icon */}
+          </span>
+          <span className="absolute text-black p-2 rounded-full bg-white top-80 right-4">
+            <i className="far fa-heart ">
+              <AiOutlineHeart />
+            </i>{" "}
+            {/* Like icon */}
+          </span>
+          <span className="absolute ml-2 text-black top-4 right-4 p-2 rounded-full bg-white">
+            <i className="fas fa-shopping-cart">
+              <BsHandbag />
+            </i>{" "}
+            {/* Cart icon */}
+          </span>
+        </div>
+        <div className="lg:w-4/5 mx-auto px-5  ">
+          <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0 ">
             <h2 className="text-2xl font-bold title-font text-gray-900 font-Popp">
               Roller Rabbit
             </h2>
@@ -57,9 +84,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-4 h-4 text-yellow-500"
                   viewBox="0 0 24 24"
                 >
@@ -68,9 +92,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-4 h-4 text-yellow-500"
                   viewBox="0 0 24 24"
                 >
@@ -79,9 +100,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-4 h-4 text-yellow-500"
                   viewBox="0 0 24 24"
                 >
@@ -90,9 +108,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <svg
                   fill="currentColor"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-4 h-4 text-yellow-500"
                   viewBox="0 0 24 24"
                 >
@@ -101,23 +116,19 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <svg
                   fill="none"
                   stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-4 h-4 text-yellow-500"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                 </svg>
-                <span className="text-gray-600 ml-3 font-Popp">4 Reviews</span>
+                <span className="text-gray-600 ml-2 text-sm font-Popp">
+                  4 Reviews
+                </span>
               </span>
               <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200 space-x-2s">
                 <a className="text-gray-500">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
@@ -127,9 +138,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <a className="text-gray-500">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
@@ -139,9 +147,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
                 <a className="text-gray-500">
                   <svg
                     fill="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
                     className="w-5 h-5"
                     viewBox="0 0 24 24"
                   >
@@ -216,9 +221,6 @@ const Cart = ({ quantity, totalAmount, increase, decrease }) => {
               <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
                 <svg
                   fill="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
                   className="w-5 h-5"
                   viewBox="0 0 24 24"
                 >

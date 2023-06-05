@@ -22,10 +22,7 @@ const Payment = () => {
       <div className="max-w-sm mx-auto mt-20 bg-pink-100 rounded-md shadow-md overflow-hidden">
         <div className="px-6 py-4">
           <div className="mb-4">
-            <label
-              className="block text-gray-700 font-bold mb-2"
-              for="card-number"
-            >
+            <label className="block text-gray-700 font-bold mb-2">
               Card Number
             </label>
             <input
@@ -37,7 +34,7 @@ const Payment = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-gray-700 font-bold mb-2" for="cvv">
+            <label className="block text-gray-700 font-bold mb-2">
               Name on card
             </label>
             <input
@@ -49,10 +46,7 @@ const Payment = () => {
 
           <div className="mb-4 flex flex-row gap-1">
             <div className="mb-4">
-              <label
-                className="block text-gray-700 font-bold mb-2"
-                for="expiration-date"
-              >
+              <label className="block text-gray-700 font-bold mb-2">
                 Expiration Date
               </label>
               <input
@@ -65,7 +59,6 @@ const Payment = () => {
             <div className="mb-4">
               <label
                 className="block text-gray-700 font-bold mb-2"
-                for="cvv"
                 typeof="code"
               >
                 Security code
